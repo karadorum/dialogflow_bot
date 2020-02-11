@@ -3,15 +3,15 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-USERNAME=os.getenv('USERNAME')
-PASSWORD=os.getenv('PASSWORD')
-LOG_TOKEN=os.getenv('LOG_TOKEN')
+USERNAME = os.getenv('USERNAME')
+PASSWORD = os.getenv('PASSWORD')
+LOG_TOKEN = os.getenv('LOG_TOKEN')
 
 LOGGING_CONFIG = {
     'version': 1,
     'disable_existing_loggers': True,
-    'formatters': { 
-        'standard': { 
+    'formatters': {
+        'standard': {
             'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
         },
     },
@@ -30,8 +30,8 @@ LOGGING_CONFIG = {
             'class': 'logging.StreamHandler',
             'level': 'INFO',
             'formatter': 'standard',
-            'stream':'ext://sys.stdout'
-        }, 
+            'stream': 'ext://sys.stdout'
+        },
         'fileHandler': {
             'class': 'logging.FileHandler',
             'level': 'DEBUG',
