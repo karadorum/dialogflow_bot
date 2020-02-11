@@ -1,3 +1,5 @@
+from vk_api.longpoll import VkLongPoll, VkEventType
+import vk_api
 from dictconfig import LOGGING_CONFIG
 import random
 import os
@@ -5,8 +7,6 @@ import logging
 import logging.config
 from dotenv import load_dotenv
 load_dotenv()
-import vk_api
-from vk_api.longpoll import VkLongPoll, VkEventType
 
 
 VK_TOKEN = os.getenv('VK_TOKEN')
@@ -43,7 +43,7 @@ def detect_intent_texts(project_id, session_id, text, language_code):
 def reply_message(event, vk_api):
     try:
         answer = detect_intent_texts(
-        PROJECT_ID, SESSION_ID, event.text, 'ru')
+            PROJECT_ID, SESSION_ID, event.text, 'ru')
     except:
         logger.exception('detect intent not working')
 
