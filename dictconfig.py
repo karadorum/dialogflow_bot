@@ -3,8 +3,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-USERNAME = os.getenv('USERNAME')
-PASSWORD = os.getenv('PASSWORD')
 LOG_TOKEN = os.getenv('LOG_TOKEN')
 
 LOGGING_CONFIG = {
@@ -22,9 +20,6 @@ LOGGING_CONFIG = {
             'formatter': 'standard',
             'token': LOG_TOKEN,
             'chat_id': '90419999',
-            'proxies': {
-                'https': f'socks5://{USERNAME}:{PASSWORD}@95.216.145.100:1080'
-            }
         },
         'consoleHandler': {
             'class': 'logging.StreamHandler',
