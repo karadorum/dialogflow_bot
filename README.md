@@ -1,12 +1,30 @@
 # dialogflow_bot
 
-This bot can make simple dialog with user & answer on the fix list of questions, using dialogflow api. 
-Demo for Telegram & VK:
+С помощью этого бота можно вести несложные диалоги и отвечать на вопросы пользователей. В качестве движка используется Dialogflow от Google.
+Демонастрация работы:
 
 ![](telegram_small.gif) ![](vk_small.gif)
 
-You can interact with bot by yourself:
-Telegram - @dialog348_bot
-VK - https://vk.com/club191375658
+Можете попробовать пообщаться с ботом сами:
+[Telegram](https://t.me/dialog348_bot)
+[сообщество VK](https://vk.com/club191375658)
 
-To make your own intents, use ```neurolearn.py``` and your correct structured json file as the argument, in the commanline type: ```python neurolearn.py -file yourfile.json```
+Предварительная подготовка
+
+Для работы ботов нужно будет создать проект на платформе Google Cloud Platform и зарегистрировать сервисный ключ. При выпуске ключа нужно выбрать JSON формат. После скачивания файла, к нему нужно указать путь в переменной окружения ```GOOGLE_APPLICATION_CREDENTIALS``` Пошаговая инструкция находится [здесь](https://cloud.google.com/dialogflow/docs/quick/api) в разделе "Set up your GCP project and authentication".
+
+Кроме того, нужно будет создать агента в консоли Dialogflow. Пошаговая инструкция на [этой](https://cloud.google.com/dialogflow/docs/quick/api) странице в разделе "Create an agent". После создания агента, нужно будет зайти в его настройки, найти идентификатор проекта и записать в переменную окружения ```PROJECT_ID```.
+
+Для работы скрипта нужно зарегистрировать в операционной системе переменные окружения:
+
+```TG_TOKEN``` - Токен бота в телеграме
+
+ ```VK_TOKEN``` - токен доступа к группе Вконтакте. 
+
+ ```GOOGLE_APPLICATION_CREDENTIALS``` - путь к json файлу с ключами к google.cloud
+
+ ```PROJECT_ID``` - идентификатор проекта в Dialogflow
+
+Затем используйте pip (или pip3, есть есть конфликт с Python2) для установки зависимостей:
+
+```pip install -r requirements.txt```
