@@ -5,4 +5,8 @@ Demo for Telegram & VK:
 
 ![](telegram_small.gif) ![](vk_small.gif)
 
+You can interact with bot by yourself:
+Telegram - @dialog348_bot
+VK - https://vk.com/club191375658
 
+To make your own intents, use ```neurolearn.py``` and your correct structured json file as the argument, in the commanline type: ```python neurolearn.py -file yourfile.json```
