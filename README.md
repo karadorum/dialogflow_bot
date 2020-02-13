@@ -6,7 +6,7 @@
 ![](telegram_small.gif) ![](vk_small.gif)
 
 Можете попробовать пообщаться с ботом сами:
-[Telegram](https://t.me/dialog348_bot)
+[Telegram](https://t.me/dialog348_bot), 
 [сообщество VK](https://vk.com/club191375658)
 
 Предварительная подготовка
