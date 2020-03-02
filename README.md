@@ -1,4 +1,4 @@
-# dialogflow_bot
+# Dialogflow Support Bot
 
 С помощью этого бота можно вести несложные диалоги и отвечать на вопросы пользователей. В качестве движка используется Dialogflow от Google.
 Демонастрация работы:
@@ -9,7 +9,7 @@
 [Telegram](https://t.me/dialog348_bot), 
 [сообщество VK](https://vk.com/club191375658)
 
-### Предварительная подготовка
+## Предварительная подготовка
 
 Для работы ботов нужно будет создать проект на платформе Google Cloud Platform и зарегистрировать сервисный ключ. При выпуске ключа нужно выбрать JSON формат. После скачивания файла, к нему нужно указать путь в переменной окружения ```GOOGLE_APPLICATION_CREDENTIALS``` Пошаговая инструкция находится [здесь](https://cloud.google.com/dialogflow/docs/quick/api) в разделе "Set up your GCP project and authentication".
 
