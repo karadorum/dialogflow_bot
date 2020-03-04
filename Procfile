@@ -1,2 +1,2 @@
-bot-vk: python3 tg_bot.py
-bot-tg: python3 vk_bot.py
+bot-vk: python3 main.py -start vkbot
+bot-tg: python3 main.py -start tgbot
