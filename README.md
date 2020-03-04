@@ -36,8 +36,8 @@
 ## Запуск
 
 Боты запускаются по отдельности. 
-Запуск телеграм бота : ```python tg_bot.py```
-Запуск VK бота: ```python vk_bot.py```
+Запуск телеграм бота : ```python main.py -start tgbot```
+Запуск VK бота: ```python main.py -start vkbot```
 
 ## Обучение бота
 
