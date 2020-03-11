@@ -8,21 +8,10 @@ load_dotenv()
 
 
 TG_TOKEN = os.getenv('TG_TOKEN')
-PROXY_URL = os.getenv('PROXY_URL')
-USERNAME = os.getenv('USERNAME')
-PASSWORD = os.getenv('PASSWORD')
+
 
 
 logger = logging.getLogger('tg_bot')
-
-
-REQUEST_KWARGS = {
-    'proxy_url': PROXY_URL,
-    'urllib3_proxy_kwargs': {
-        'username': USERNAME,
-        'password': PASSWORD,
-    }
-}
 
 
 def start(update, context):
@@ -51,7 +40,7 @@ def reply_message(update, context):
 def start_tg_bot():
     """Start the bot."""
     updater = Updater(
-        TG_TOKEN, request_kwargs=REQUEST_KWARGS, use_context=True)
+        TG_TOKEN, use_context=True)
     dp = updater.dispatcher
 
     # on different commands - answer in Telegram
