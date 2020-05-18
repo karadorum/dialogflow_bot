@@ -26,6 +26,8 @@ def detect_intent_texts(session_id, text, language_code):
 
     response = session_client.detect_intent(
         session=session, query_input=query_input)
+    if response.query_result.intent.is_fallback:
+        return None
 
     answer = response.query_result.fulfillment_text
 
